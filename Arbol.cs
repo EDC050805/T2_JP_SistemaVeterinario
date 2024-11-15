@@ -55,10 +55,25 @@ namespace T2_JP_SistemaVeterinario
                 }
             }
         }
-
-        public void mostrarArbolito()
+        public void muestraArbol(NodoVet arb, int cont)
         {
+            NodoVet Tope;
+            if (arb == null)
+            {
+                return;
+            }
+            else
+            {
+                muestraArbol(arb.derecha, cont + 1);
+                for (int i = 0; i < cont; i++)
+                {
+                    Console.Write("\t\t\t\t\t   ");
 
+                }
+                Console.WriteLine(arb.CodigoMascota);
+                muestraArbol(arb.izquierda, cont + 1);
+            }
         }
+       
     }
 }

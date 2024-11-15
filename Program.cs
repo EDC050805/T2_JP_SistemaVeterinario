@@ -43,6 +43,7 @@ namespace T2_JP_SistemaVeterinario
                         Console.Clear();
                         Menus.Encabezado(" Agregando mascota");
                         vet.AgregarMascota();
+                        Console.ReadLine();
                         break;
 
                     case 2:
@@ -58,7 +59,7 @@ namespace T2_JP_SistemaVeterinario
                     case 4:
                         Console.Clear();
                         vet.PasarColaAArbol();
-                        //vet.ModificarMascotaPorCodigo();
+                     
                         break;
 
                     case 5:
@@ -69,7 +70,7 @@ namespace T2_JP_SistemaVeterinario
 
                     case 6:
                         Console.Clear();
-                        vet.PasarColaAArbol();
+                     
                         break;
 
                     case 7:
