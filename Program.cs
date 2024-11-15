@@ -85,6 +85,7 @@ namespace T2_JP_SistemaVeterinario
 
                     case 9:
                         Console.WriteLine("\n\t\t\t\t\t ¡Hasta luego!\n");
+                        Console.ReadLine();
                         return; // Termina el programa
 
                     default:

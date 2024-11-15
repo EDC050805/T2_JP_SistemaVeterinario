@@ -405,7 +405,7 @@ namespace T2_JP_SistemaVeterinario
         //Función para generar reporte
         public void GenerarReporte()
         {
-            double hembras = 0, machos = 0, mascotasentre6y15 = 0, entre5a9 = 0, entre10a12k = 0, contador1 = colaMascotas.Count();
+            double hembras = 0, machos = 0, mascotasentre6y15 = 0, entre5a9 = 0, entre10a12k = 0, contador1 = 0;
 
             Console.Write("\n\t\t\t\t\t Generando reporte de mascotas...");
             Console.ReadKey();
@@ -415,9 +415,10 @@ namespace T2_JP_SistemaVeterinario
 
             arbolito.MostrarArbolitoenOrden(arbolito.arbolito);
 
-            Console.WriteLine("\n DATOS:\n\n  Total de mascotas en la cola: " + colaMascotas.Count());
+           
+            arbolito.CalculosArbolito(arbolito.arbolito, ref hembras, ref machos, ref mascotasentre6y15, ref entre5a9, ref entre10a12k, ref contador1);
 
-            arbolito.CalculosArbolito(arbolito.arbolito, ref hembras, ref machos, ref mascotasentre6y15, ref entre5a9, ref entre10a12k);
+            Console.WriteLine("\n DATOS:\n\n  Total de mascotas en la cola: " + contador1);
 
             Console.WriteLine($"  Mascotas hembras: {hembras}");
 

@@ -88,7 +88,7 @@ namespace T2_JP_SistemaVeterinario
                 MostrarArbolitoenOrden(arb.derecha);
             }
         }
-        public void CalculosArbolito(NodoVet arb, ref double hembras, ref double machos, ref double mascotasentre6y15, ref double entre5a9, ref double entre10a12k)
+        public void CalculosArbolito(NodoVet arb, ref double hembras, ref double machos, ref double mascotasentre6y15, ref double entre5a9, ref double entre10a12k, ref double TotalMascotas)
         {
             if (arb == null)
             {
@@ -96,7 +96,9 @@ namespace T2_JP_SistemaVeterinario
             }
             else
             {
-                MostrarArbolitoenOrden(arb.izquierda);
+                CalculosArbolito(arb.izquierda, ref hembras, ref machos, ref mascotasentre6y15, ref entre5a9, ref entre10a12k, ref TotalMascotas);
+
+                TotalMascotas++;
                 if (arb.Sexo.ToUpper() == "HEMBRA")
                 {
                     hembras++;
@@ -121,7 +123,7 @@ namespace T2_JP_SistemaVeterinario
                     entre10a12k++;
                 }
 
-                MostrarArbolitoenOrden(arb.derecha);
+                CalculosArbolito(arb.derecha, ref hembras, ref machos, ref mascotasentre6y15, ref entre5a9, ref entre10a12k, ref TotalMascotas);
             }
         }
         public void MostrarRazaCooker(NodoVet arb)
@@ -132,13 +134,13 @@ namespace T2_JP_SistemaVeterinario
             }
             else
             {
-                MostrarArbolitoenOrden(arb.izquierda);
+                MostrarRazaCooker(arb.izquierda);
                 if (arb.Raza.ToUpper() == "COOKER")
                 {
                     Console.WriteLine(" |    " + arb.CodigoMascota.ToString().PadRight(7) + "|   " + arb.CodigoCliente.ToString().PadRight(6) + "|    " + arb.Cliente.PadRight(43) + "|   " + arb.AliasMascota.PadRight(12) + "|     " + arb.Peso.ToString().PadRight(7) + "|  " + arb.Raza.PadRight(14) + "|  " + arb.Edad.ToString().PadRight(4) + "| " + arb.Sexo.PadRight(7) + "|");
                 }
 
-                MostrarArbolitoenOrden(arb.derecha);
+                MostrarRazaCooker(arb.derecha);
             }
         }
     }
