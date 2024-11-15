@@ -11,6 +11,7 @@ namespace T2_JP_SistemaVeterinario
         //Inicializamos la cola y la pila para obtener las operaciones que realiza
         private Cola colaMascotas = new Cola();
         private Pila pilaMascotas = new Pila();
+        private Arbol arbolito = new Arbol();
         private int contador = 0; //Contador para no agregar más de una vez los datos por defecto
         //Inicializamos la clase "Random" para usar las operaciones en él (colocar valores aleatorios)
         static public Random rnd = new Random(); //Instanciando (creando un objeto que permite usar los atributos y las funciones de la clase a la que se llama) la clase Random
@@ -222,7 +223,7 @@ namespace T2_JP_SistemaVeterinario
             while (colaMascotas.frente != null)
             {
                 NodoVet mascota = colaMascotas.dequeue();
-                pilaMascotas.push(mascota);
+                arbolito.AgregarMascota(mascota);
             }
 
             Console.WriteLine("\n\t\t\t\t\t ¡La cola está vacía ahora!");

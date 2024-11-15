@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Arbol.cs" />
     <Compile Include="Cola.cs" />
     <Compile Include="Menus.cs" />
     <Compile Include="NodoVet.cs" />

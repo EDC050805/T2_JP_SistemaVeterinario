@@ -20,6 +20,10 @@ namespace T2_JP_SistemaVeterinario
 
         public NodoVet siguiente; // Nodo siguiente para la pila o cola
 
+        public NodoVet izquierda;
+
+        public NodoVet derecha;
+
         //Constructor (para construir el objeto de tipo "NodoVet" con sus atributos)
         public NodoVet(int codigoMascota, int codigoCliente, string cliente, string aliasMascota, int peso, int edad, string raza, string sexo)
         {
