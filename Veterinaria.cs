@@ -16,15 +16,6 @@ namespace T2_JP_SistemaVeterinario
         //Inicializamos la clase "Random" para usar las operaciones en él (colocar valores aleatorios)
         static public Random rnd = new Random(); //Instanciando (creando un objeto que permite usar los atributos y las funciones de la clase a la que se llama) la clase Random
 
-        //Una clase o una función puede ser "public", "protected" o "private" dependiendo de la necesidad que tenga cada uno. Estos definen el alcance que tiene la clase o la
-        //función. Si se habla de clases, "public" permite usar las funciones de la clase en otras clases, "protected" permite el uso de las funciones de la clase pero solo en
-        //las clases que son herencia de este y private permite el uso de las funciones pero solo de la misma clase. Siguiendo la misma lógica, en las funciones, "public" permite
-        //el uso de las operaciones o variables declaradas en dicha función, en cualquier función dentro de la clase o fuera de ella dependiendo del alcance de la clase. "protected"
-        //permite el uso de los procesos dentro de la función pero solo para las funciones que son herencia de la misma. Y "private" permite el uso único de los procesos, dando acceso
-        //a ellas a solo la misma función que las creó
-        //En cuanto al valor que se coloca antes del nombre de la función, esta puede ser "int", "double", "boole", "string", "float", etc.; si se retorna valor (si manda el dato al lugar
-        //que llamó a esta función); o puede ser "void" (vacío) si no se manda nada a la función anterior
-
         //Función para agregar mascotas por medio de colas
         public void AgregarMascota()
         {
@@ -218,7 +209,7 @@ namespace T2_JP_SistemaVeterinario
         }
 
         //Función para pasar de la cola a la pila
-        public void PasarColaAPila()
+        public void PasarColaAArbol()
         {
             while (colaMascotas.frente != null)
             {

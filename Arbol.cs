@@ -54,6 +54,10 @@ namespace T2_JP_SistemaVeterinario
                     }
                 }
             }
+        }
+
+        public void mostrarArbolito()
+        {
 
         }
     }
