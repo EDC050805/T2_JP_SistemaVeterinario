@@ -18,14 +18,12 @@ namespace T2_JP_SistemaVeterinario
         public string Raza { get; set; }
         public string Sexo { get; set; }
 
-        public NodoVet siguiente; // Nodo siguiente para la pila o cola
-
+        public NodoVet siguiente; 
         public NodoVet izquierda;
-
         public NodoVet derecha;
 
         //Constructor (para construir el objeto de tipo "NodoVet" con sus atributos)
-        public NodoVet(int codigoMascota, int codigoCliente, string cliente, string aliasMascota, int peso, int edad, string raza, string sexo)
+        public NodoVet(int codigoMascota, int codigoCliente, string cliente, string aliasMascota, int peso, int edad, string raza, string sexo, NodoVet siguiente, NodoVet izquierda, NodoVet derecha)
         {
             CodigoMascota = codigoMascota;
             CodigoCliente = codigoCliente;
@@ -35,6 +33,9 @@ namespace T2_JP_SistemaVeterinario
             Edad = edad;
             Raza = raza;
             Sexo = sexo;
+            this.siguiente = siguiente;
+            this.izquierda = izquierda;
+            this.derecha = derecha;
         }
     }
 }

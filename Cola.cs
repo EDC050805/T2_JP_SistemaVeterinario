@@ -16,7 +16,6 @@ namespace T2_JP_SistemaVeterinario
         //Constructor
         public Cola()
         {
-            //"this" se usa para utilizar un atributo de la clase presente en otra función
             this.frente = null;
             this.final = null;
         }
@@ -74,9 +73,6 @@ namespace T2_JP_SistemaVeterinario
             Console.ForegroundColor = ConsoleColor.Yellow;
             while (actual != null)
             {
-                //Usamos "PadRight()" para agregar espacios desde el comienzo de la variable hacia la derecha (si termina la cadena que muestra la variable entonces va
-                //agregando espacios en blanco o lo que se especifica en el uso de "PadRight()"), empujando a la derecha a la variable siguiente a mostrar. El "PadLeft()" funciona
-                //al revés, agregando espacios a la izquierda hasta terminar la cadena de la variable, empujándose a sí misma desde la cadena de la variable anterior
                 Console.WriteLine(" |    " + actual.CodigoMascota.ToString().PadRight(7) + "|   " + actual.CodigoCliente.ToString().PadRight(6) + "|    " + actual.Cliente.PadRight(43) +
                     "|   " + actual.AliasMascota.PadRight(12) + "|     " + actual.Peso.ToString().PadRight(7) + "|  " + actual.Raza.PadRight(14) + "|  " + actual.Edad.ToString().PadRight(4) + "| " + actual.Sexo.PadRight(7) + "|");
                 actual = actual.siguiente;
