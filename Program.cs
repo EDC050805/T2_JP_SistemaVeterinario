@@ -16,7 +16,7 @@ namespace T2_JP_SistemaVeterinario
         //Console.WriteLine("\n\t\t\t\t\t |1| Agregar Mascota a la cola");
         //Console.WriteLine("\n\t\t\t\t\t |2| Insertar en la cola valores por defecto");
         // Console.WriteLine("\n\t\t\t\t\t |3| Mostrar Mascotas de la cola");
-        //    Console.WriteLine("\n\t\t\t\t\t |4| Generar árbol por código de mascota y mostrar árbol");
+        // Console.WriteLine("\n\t\t\t\t\t |4| Generar árbol por código de mascota y mostrar árbol");
 
 
         //    Console.WriteLine("\n\t\t\t\t\t |5| Eliminar por código");
@@ -69,6 +69,11 @@ namespace T2_JP_SistemaVeterinario
                         break;
 
                     case 6:
+
+                        vet.MostrarArbolInOrden();
+                        Console.ReadLine();
+                        //////////////////////////////////////
+
                         Console.Clear();
                      
                         break;

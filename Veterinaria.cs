@@ -10,13 +10,12 @@ namespace T2_JP_SistemaVeterinario
     {
         //Inicializamos la cola y la pila para obtener las operaciones que realiza
         private Cola colaMascotas = new Cola();
-        private Pila pilaMascotas = new Pila();
+      
         private Arbol arbolito = new Arbol();
-        private int contador = 0; //Contador para no agregar más de una vez los datos por defecto
-        //Inicializamos la clase "Random" para usar las operaciones en él (colocar valores aleatorios)
-        static public Random rnd = new Random(); //Instanciando (creando un objeto que permite usar los atributos y las funciones de la clase a la que se llama) la clase Random
 
-        //Función para agregar mascotas por medio de colas
+        private int contador = 0; 
+        static public Random rnd = new Random(); 
+
         public void AgregarMascota()
         {
             bool flag = false; //Variable para validar datos
@@ -188,7 +187,7 @@ namespace T2_JP_SistemaVeterinario
             string cliente = null, aliasMascota = null, raza = null, sexo = null;
             int codigoMascota = rnd.Next(121, 901); //Valores aleatorios de 121 a 900
             int codigoCliente = rnd.Next(10, 901); //Valores aleatorios de 10 a 900
-
+            Console.WriteLine("\n\t\t\t\t\t Codigo de la nueva mascota:\n\t\t\t\t\t -> " + codigoMascota);
             Console.Write("\n\t\t\t\t\t Introduzca el nombre del dueño:\n\t\t\t\t\t -> ");
             cliente = Console.ReadLine();
             //Intentamos volverlo a entero y si se puede quiere decir que no es una cadena. Si no se puede entonces es válido
@@ -388,7 +387,7 @@ namespace T2_JP_SistemaVeterinario
                 Console.Clear();
                 Console.WriteLine("\t\t\t\t\t Datos pasados exitosamente!");
                 Console.WriteLine("\t\t\t\t\t  Arbol:");
-                arbolito.muestraArbol(arbolito.arbolito, 0);
+                arbolito.muestraArbolRaicesYHojas(arbolito.arbolito, 0);
                 Console.WriteLine("\t\t\t\t\t  \n¿Desea ingresar otra mascota?");
                 Console.WriteLine("\t\t\t\t\t  \nIngrese 1 para confirmar, caso contrario ingrese cualquier otra cosa");
                 rpt = Console.ReadLine();
@@ -413,10 +412,12 @@ namespace T2_JP_SistemaVeterinario
             Console.Clear();
             Console.WriteLine(" VETERINARIA RAMOS S.A.\n REGISTRO DE ANIMALES\n\n\n");
             Console.WriteLine("                                                               REPORTE DE ATENCIÓN DE ANIMALES");
-            colaMascotas.muestracola();
+
+            arbolito.MostrarArbolitoenOrden(arbolito.arbolito);
+
             Console.WriteLine("\n DATOS:\n\n  Total de mascotas en la cola: " + colaMascotas.Count());
 
-            colaMascotas.Calculos(ref hembras, ref machos, ref mascotasentre6y15, ref entre5a9, ref entre10a12k);
+            arbolito.CalculosArbolito(arbolito.arbolito, ref hembras, ref machos, ref mascotasentre6y15, ref entre5a9, ref entre10a12k);
 
             Console.WriteLine($"  Mascotas hembras: {hembras}");
 
@@ -428,8 +429,14 @@ namespace T2_JP_SistemaVeterinario
             Console.WriteLine($"  Mascotas entre 10 a 12 kilos: {entre10a12k}");
             Console.WriteLine($"  Porcentaje de mascotas entre 10 a 12 kilos con respecto al total: {((entre10a12k / contador1) * 100).ToString("0.00")}%");
             Console.WriteLine("\n\n  Mascotas de la raza 'Pastor': \n");
-
-            colaMascotas.mostrarRazaPastor();
+            Console.WriteLine(" ");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("  -----------------------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine(" |  CÓDIGO   | CÓDIGO  |                                               |    ALIAS      |            |                |      |        |");
+            Console.WriteLine(" |  MASCOTA  | CLIENTE |                    CLIENTE                    |    MASCOTA    | PESO(1-40) |      RAZA      | EDAD |  SEXO  |");
+            Console.WriteLine("  -----------------------------------------------------------------------------------------------------------------------------------");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            arbolito.MostrarRazaCooker(arbolito.arbolito);
         }
 
         //Función para buscar mascota según código
@@ -540,6 +547,17 @@ namespace T2_JP_SistemaVeterinario
                 Console.WriteLine("\n\n\t\t\t\t\tYa se han agregado los valores predeterminados...\n");
                 Console.ReadKey();
             }
+        }
+
+        public void MostrarArbolInOrden()
+        {
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("  -----------------------------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine(" |  CÓDIGO   | CÓDIGO  |                                               |    ALIAS      |            |                |      |        |");
+            Console.WriteLine(" |  MASCOTA  | CLIENTE |                    CLIENTE                    |    MASCOTA    | PESO(1-40) |      RAZA      | EDAD |  SEXO  |");
+            Console.WriteLine("  -----------------------------------------------------------------------------------------------------------------------------------");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            arbolito.MostrarArbolitoenOrden(arbolito.arbolito);
         }
     }
 }
