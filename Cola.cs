@@ -162,57 +162,6 @@ namespace T2_JP_SistemaVeterinario
             }
             return null;
         }
-
-        //Método para desarrollar los cálculos que deben mostrarse en el reporte
-        public void Calculos(ref double hembras, ref double machos, ref double mascotasentre6y15, ref double entre5a9, ref double entre10a12k)
-        {
-            NodoVet actual = frente;
-            while (actual != null)
-            {
-                if (actual.Sexo.ToUpper() == "HEMBRA")
-                    hembras++;
-
-                if (actual.Sexo.ToUpper() == "MACHO")
-                    machos++;
-
-                if (actual.Edad >= 6 && actual.Edad <= 15)
-                    mascotasentre6y15++;
-
-                if (actual.Edad >= 5 && actual.Edad <= 9)
-                    entre5a9++;
-
-
-                if (actual.Peso >= 10 && actual.Edad <= 12)
-                    entre10a12k++;
-
-                actual = actual.siguiente;
-            }
-        }
-
-        //Método para mostrar los nodos que tienen como raza "Pastor"
-        public void mostrarRazaPastor()
-        {
-            NodoVet actual = frente;
-            Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine("  -----------------------------------------------------------------------------------------------------------------------------------");
-            Console.WriteLine(" |  CÓDIGO   | CÓDIGO  |                                               |    ALIAS      |            |                |      |        |");
-            Console.WriteLine(" |  MASCOTA  | CLIENTE |                    CLIENTE                    |    MASCOTA    | PESO(1-40) |      RAZA      | EDAD |  SEXO  |");
-            Console.WriteLine("  -----------------------------------------------------------------------------------------------------------------------------------");
-            Console.ForegroundColor = ConsoleColor.Yellow;
-
-            while (actual != null)
-            {
-                if (actual.Raza.ToUpper() == "PASTOR")
-                {
-                    Console.WriteLine(" |    " + actual.CodigoMascota.ToString().PadRight(7) + "|   " + actual.CodigoCliente.ToString().PadRight(6) + "|    " + actual.Cliente.PadRight(43) + "|   " + actual.AliasMascota.PadRight(12) + "|     " + actual.Peso.ToString().PadRight(7) + "|  " + actual.Raza.PadRight(14) + "|  " + actual.Edad.ToString().PadRight(4) + "| " + actual.Sexo.PadRight(7) + "|");
-                }
-                actual = actual.siguiente;
-            }
-
-            Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine("  -----------------------------------------------------------------------------------------------------------------------------------");
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.ReadKey();
-        }
+      
     }
 }
