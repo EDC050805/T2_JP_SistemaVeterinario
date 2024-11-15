@@ -73,7 +73,7 @@ namespace T2_JP_SistemaVeterinario
                     case 8:
                         vet.AlturaDelArbol();
                         Console.ReadKey();
-                        vet.insertarDatosPorDefecto();
+                  
                         break;
 
                     case 9:
@@ -81,7 +81,7 @@ namespace T2_JP_SistemaVeterinario
                         return; // Termina el programa
                     case 10:
                         Console.WriteLine("\n\t\t\t\t\t ¡Hasta luego!\n");
-                        vet.GenerarReporte();
+                     
                         break;
 
                     default:

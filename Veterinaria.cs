@@ -25,8 +25,7 @@ namespace T2_JP_SistemaVeterinario
 
             Console.Write("\n\t\t\t\t\t Introduzca el nombre del dueño:\n\t\t\t\t\t -> ");
             cliente = Console.ReadLine();
-            //Intentamos volverlo a entero y si se puede quiere decir que no es una cadena. Si no se puede entonces es válido
-            //El "Try Catch" intenta hacer un proceso y si no se cumple entonces se ejecuta lo que está dentro del "catch". Es la mejor opción para controlar excepciones.
+           
             try
             {
                 int cliente1 = int.Parse(cliente);
