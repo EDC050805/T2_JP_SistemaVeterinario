@@ -88,11 +88,11 @@ namespace T2_JP_SistemaVeterinario
             Console.WriteLine("\n\t\t\t\t\t |3| Mostrar Mascotas de la cola");
             Console.WriteLine("\n\t\t\t\t\t |4| Generar árbol por código de mascota y mostrar árbol");
             Console.WriteLine("\n\t\t\t\t\t |5| Eliminar por código");
-            Console.WriteLine("\n\t\t\t\t\t |5| Buscar mascota por código y actualizar");
-            Console.WriteLine("\n\t\t\t\t\t |6| Recorrer el árbol en InOrder (menor a mayor)");
-            Console.WriteLine("\n\t\t\t\t\t |7| Altura del árbol");
-            Console.WriteLine("\n\t\t\t\t\t |8| Generar Reporte de Mascotas");
-            Console.WriteLine("\n\t\t\t\t\t |9| Salir");
+            Console.WriteLine("\n\t\t\t\t\t |6| Buscar mascota por código y actualizar");
+            Console.WriteLine("\n\t\t\t\t\t |7| Recorrer el árbol en InOrder (menor a mayor)");
+            Console.WriteLine("\n\t\t\t\t\t |8| Altura del árbol");
+            Console.WriteLine("\n\t\t\t\t\t |9| Generar Reporte de Mascotas");
+            Console.WriteLine("\n\t\t\t\t\t |10 Salir");
      
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("\n\t\t\t\t\t====================================");

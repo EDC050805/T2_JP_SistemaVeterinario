@@ -15,7 +15,7 @@ namespace T2_JP_SistemaVeterinario
     {
      
         //    Console.WriteLine("\n\t\t\t\t\t |5| Eliminar por código");
-        //    Console.WriteLine("\n\t\t\t\t\t |5| Buscar mascota por código y actualizar");
+        //    Console.WriteLine("\n\t\t\t\t\t |6| Buscar mascota por código y actualizar");
  
         //    Console.WriteLine("\n\t\t\t\t\t |7| Altura del árbol");
   
@@ -59,7 +59,6 @@ namespace T2_JP_SistemaVeterinario
 
                     case 5:
                         Console.Clear();
-                        Menus.Encabezado(" Pasando a pila");
                         vet.BuscarMascotaPorCodigo();
                         break;
 
