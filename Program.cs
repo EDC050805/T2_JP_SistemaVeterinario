@@ -64,33 +64,36 @@ namespace T2_JP_SistemaVeterinario
 
                     case 5:
                         Console.Clear();
-                        Menus.Encabezado(" Pasando a pila");
-                        vet.BuscarMascotaPorCodigo();
+                        vet.EliminarMascotaPorCodigo();
                         break;
 
                     case 6:
+                        Console.Clear();
+                        vet.BuscarMascotaPorCodigo();
+                        Console.ReadKey();
+                        break;
 
+                    case 7:
                         vet.MostrarArbolInOrden();
                         Console.ReadLine();
                         //////////////////////////////////////
 
                         Console.Clear();
-                     
-                        break;
-
-                    case 7:
-                        Console.Clear();
-                        vet.insertarDatosPorDefecto();
                         break;
 
                     case 8:
                         Console.Clear();
-                        vet.GenerarReporte();
+                        vet.AlturaDelArbol();
+                        Console.ReadKey();
                         break;
 
                     case 9:
-                        Console.WriteLine("\n\t\t\t\t\t ¡Hasta luego!\n");
+                        Console.Clear();
+                        vet.GenerarReporte();
                         return; // Termina el programa
+                    case 10:
+                        Console.WriteLine("\n\t\t\t\t\t ¡Hasta luego!\n");
+                        break;
 
                     default:
                         Console.WriteLine("\n\t\t\t\t\t Opción no válida, intenta de nuevo.");
@@ -102,7 +105,7 @@ namespace T2_JP_SistemaVeterinario
                 Console.ReadKey();
                 Console.Clear();
             }
-            while (opcion != 9);
+            while (opcion != 10);
         }
     }
 }
