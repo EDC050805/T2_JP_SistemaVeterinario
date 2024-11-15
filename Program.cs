@@ -60,13 +60,6 @@ namespace T2_JP_SistemaVeterinario
                     case 5:
                         Console.Clear();
                         vet.EliminarMascotaPorCodigo();
-                        vet.BuscarMascotaPorCodigo();
-                        break;
-
-                        Console.Clear();
-                        vet.BuscarMascotaPorCodigo();
-                        Console.ReadKey();
-                        break;
                         break;
                     case 7:
                         vet.MostrarArbolInOrden();
