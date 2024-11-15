@@ -13,17 +13,12 @@ namespace T2_JP_SistemaVeterinario
     //Las clases son lugares que contienen funciones y atributos que permiten crear objetos y realizar distintas operaciones
     class Program
     {
-        //Console.WriteLine("\n\t\t\t\t\t |1| Agregar Mascota a la cola");
-        //Console.WriteLine("\n\t\t\t\t\t |2| Insertar en la cola valores por defecto");
-        // Console.WriteLine("\n\t\t\t\t\t |3| Mostrar Mascotas de la cola");
-        // Console.WriteLine("\n\t\t\t\t\t |4| Generar árbol por código de mascota y mostrar árbol");
-
-
+     
         //    Console.WriteLine("\n\t\t\t\t\t |5| Eliminar por código");
         //    Console.WriteLine("\n\t\t\t\t\t |5| Buscar mascota por código y actualizar");
-        //    Console.WriteLine("\n\t\t\t\t\t |6| Recorrer el árbol en InOrder (menor a mayor)");
+ 
         //    Console.WriteLine("\n\t\t\t\t\t |7| Altura del árbol");
-        //    Console.WriteLine("\n\t\t\t\t\t |8| Generar Reporte de Mascotas");
+  
         static void Main(string[] args)
         {
             Veterinaria vet = new Veterinaria();
@@ -54,7 +49,7 @@ namespace T2_JP_SistemaVeterinario
                     case 3:
                         Console.Clear();
                         vet.MostrarMascotas();
-                       // vet.EliminarMascotaPorCodigo();
+                
                         break;
                     case 4:
                         Console.Clear();
@@ -72,7 +67,7 @@ namespace T2_JP_SistemaVeterinario
 
                         vet.MostrarArbolInOrden();
                         Console.ReadLine();
-                        //////////////////////////////////////
+                  
 
                         Console.Clear();
                      
