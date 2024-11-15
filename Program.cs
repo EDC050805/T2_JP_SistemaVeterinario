@@ -59,38 +59,38 @@ namespace T2_JP_SistemaVeterinario
 
                     case 5:
                         Console.Clear();
-                        
+                        vet.EliminarMascotaPorCodigo();
+                        vet.BuscarMascotaPorCodigo();
                         break;
 
-                    case 6:
-
-                      
+                        Console.Clear();
+                        vet.BuscarMascotaPorCodigo();
+                        Console.ReadKey();
+                        break;
+                        break;
+                    case 7:
+                        vet.MostrarArbolInOrden();
+                        vet.MostrarArbolInOrden();
                         Console.ReadLine();
                   
 
                         Console.Clear();
-                     
-                        break;
-
-                    case 7:
-                        Console.Clear();
-                        vet.MostrarArbolInOrden();
-                        Console.ReadLine();
                         break;
 
                     case 8:
-                        Console.Clear();
-                      
+                        vet.AlturaDelArbol();
+                        Console.ReadKey();
+                        vet.insertarDatosPorDefecto();
                         break;
 
                     case 9:
-                        Console.Clear();
                         vet.GenerarReporte();
-                        Console.ReadLine();
                         return; // Termina el programa
-
                     case 10:
+                        Console.WriteLine("\n\t\t\t\t\t ¡Hasta luego!\n");
+                        vet.GenerarReporte();
                         break;
+
                     default:
                         Console.WriteLine("\n\t\t\t\t\t Opción no válida, intenta de nuevo.");
                         break;

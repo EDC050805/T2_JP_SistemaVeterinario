@@ -85,7 +85,7 @@ namespace T2_JP_SistemaVeterinario
             Console.WriteLine("\n\t\t\t\t\t |7| Recorrer el árbol en InOrder (menor a mayor)");
             Console.WriteLine("\n\t\t\t\t\t |8| Altura del árbol");
             Console.WriteLine("\n\t\t\t\t\t |9| Generar Reporte de Mascotas");
-            Console.WriteLine("\n\t\t\t\t\t |10 Salir");
+            Console.WriteLine("\n\t\t\t\t\t |10| Salir");
      
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("\n\t\t\t\t\t====================================");
