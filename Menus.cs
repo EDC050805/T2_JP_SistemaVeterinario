@@ -8,6 +8,7 @@ namespace T2_JP_SistemaVeterinario
 {
     public class Menus
     {
+        //Se coloca "static" para no tener que crear el objeto cuando use las funciones de esta clase
         //Menú de presentación de la empresa
         static public void Presentacion()
         {
@@ -70,6 +71,12 @@ namespace T2_JP_SistemaVeterinario
         {
             int opcion = 0;
             bool flag = false;
+            //Generamos un contador de recursividad para que cada vez que llame a la misma función,
+            //cuando la última llamada termine, se aumente en uno y no guarde el valor "opción" de la función anterior,
+            //que sería un "string" (por eso se llamó a la misma función), que genera un error ya que no se
+            //puede guardar una variable "string" en un "int". La recursividad como tal matienen un historial compuesto
+            //por todas las veces que se ha entrado a la misma función y cuando termina su trabajo y cumple con la condición
+            //puesta para llamar a la misma función, va cerrando una por una las veces que se ha ingresado a la misma función (va retrocediendo)
             int contDeRecursividad = 0;
 
             Console.Clear();
