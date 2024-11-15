@@ -63,7 +63,7 @@ namespace T2_JP_SistemaVeterinario
                         break;
                     case 7:
                         vet.MostrarArbolInOrden();
-                        vet.MostrarArbolInOrden();
+            
                         Console.ReadLine();
                   
 
