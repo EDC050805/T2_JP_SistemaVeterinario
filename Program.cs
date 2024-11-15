@@ -59,12 +59,12 @@ namespace T2_JP_SistemaVeterinario
 
                     case 5:
                         Console.Clear();
-                        vet.BuscarMascotaPorCodigo();
+                        
                         break;
 
                     case 6:
 
-                        vet.MostrarArbolInOrden();
+                      
                         Console.ReadLine();
                   
 
@@ -74,19 +74,23 @@ namespace T2_JP_SistemaVeterinario
 
                     case 7:
                         Console.Clear();
-                        vet.insertarDatosPorDefecto();
+                        vet.MostrarArbolInOrden();
+                        Console.ReadLine();
                         break;
 
                     case 8:
                         Console.Clear();
-                        vet.GenerarReporte();
+                      
                         break;
 
                     case 9:
-                        Console.WriteLine("\n\t\t\t\t\t ¡Hasta luego!\n");
+                        Console.Clear();
+                        vet.GenerarReporte();
                         Console.ReadLine();
                         return; // Termina el programa
 
+                    case 10:
+                        break;
                     default:
                         Console.WriteLine("\n\t\t\t\t\t Opción no válida, intenta de nuevo.");
                         break;
@@ -97,7 +101,7 @@ namespace T2_JP_SistemaVeterinario
                 Console.ReadKey();
                 Console.Clear();
             }
-            while (opcion != 9);
+            while (opcion != 10);
         }
     }
 }
