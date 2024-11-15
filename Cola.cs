@@ -74,9 +74,6 @@ namespace T2_JP_SistemaVeterinario
             Console.ForegroundColor = ConsoleColor.Yellow;
             while (actual != null)
             {
-                //Usamos "PadRight()" para agregar espacios desde el comienzo de la variable hacia la derecha (si termina la cadena que muestra la variable entonces va
-                //agregando espacios en blanco o lo que se especifica en el uso de "PadRight()"), empujando a la derecha a la variable siguiente a mostrar. El "PadLeft()" funciona
-                //al revés, agregando espacios a la izquierda hasta terminar la cadena de la variable, empujándose a sí misma desde la cadena de la variable anterior
                 Console.WriteLine(" |    " + actual.CodigoMascota.ToString().PadRight(7) + "|   " + actual.CodigoCliente.ToString().PadRight(6) + "|    " + actual.Cliente.PadRight(43) +
                     "|   " + actual.AliasMascota.PadRight(12) + "|     " + actual.Peso.ToString().PadRight(7) + "|  " + actual.Raza.PadRight(14) + "|  " + actual.Edad.ToString().PadRight(4) + "| " + actual.Sexo.PadRight(7) + "|");
                 actual = actual.siguiente;
@@ -86,82 +83,6 @@ namespace T2_JP_SistemaVeterinario
             Console.ForegroundColor = ConsoleColor.Yellow;
         }
 
-        //Función para obtener la cantidad de elementos de la cola
-        public int Count()
-        {
-            int count = 0;
-            NodoVet actual = frente;
-            while (actual != null)
-            {
-                count++;
-                actual = actual.siguiente;
-            }
-            return count;
-        }
-
-        // Método para buscar una mascota por código
-        public NodoVet BuscarPorCodigo(int codigo)
-        {
-            NodoVet actual = frente;
-            while (actual != null)
-            {
-                if (actual.CodigoMascota == codigo)
-                {
-                    return actual;
-                }
-                actual = actual.siguiente;
-            }
-            return null;
-        }
-
-        // Método para eliminar una mascota por código
-        public bool EliminarPorCodigo(int codigo)
-        {
-            NodoVet actual = frente;
-            NodoVet anterior = null;
-
-            while (actual != null)
-            {
-                if (actual.CodigoMascota == codigo)
-                {
-                    if (anterior == null) // La mascota está en el frente
-                    {
-                        frente = frente.siguiente;
-                        if (frente == null) final = null; // Si era el único elemento
-                    }
-                    else
-                    {
-                        anterior.siguiente = actual.siguiente;
-                        if (actual == final) final = anterior; // Si era el último
-                    }
-                    return true;
-                }
-                anterior = actual;
-                actual = actual.siguiente;
-            }
-            return false; // No se encontró la mascota
-        }
-
-        //Función para actualizar los datos de una mascota según su código
-        public NodoVet ModificarPorCodigo(int codigo, string cliente, string mascota, int peso, int edad, string raza, string sexo)
-        {
-            NodoVet actual = frente;
-            while (actual != null)
-            {
-                if (actual.CodigoMascota == codigo)
-                {
-                    actual.Cliente = cliente;
-                    actual.AliasMascota = mascota;
-                    actual.Peso = peso;
-                    actual.Edad = edad;
-                    actual.Raza = raza;
-                    actual.Sexo = sexo;
-                    return actual;
-                }
-                actual = actual.siguiente;
-            }
-            return null;
-        }
-      
+   
     }
 }

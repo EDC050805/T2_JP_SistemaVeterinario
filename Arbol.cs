@@ -243,17 +243,17 @@ namespace T2_JP_SistemaVeterinario
         }
         public int Altura(NodoVet arbolito)
         {
-            int AltIzq, AltDer; //Altura por la izquierda y por la derecha del arbol
-            if (arbolito == null) return -1; //Salir (Arbol no tiene elementos)
-            //El arbol si tiene nodos o elementos
+            int AltIzq, AltDer; 
+            if (arbolito == null) return -1;
+         
             else
             {
-                //Altura del arbol por la izquierda
+              
                 AltIzq = Altura(arbolito.izquierda);
-                //Altura del arbol por la derecha
+               
                 AltDer = Altura(arbolito.derecha);
-                if (AltIzq > AltDer) return AltIzq + 1; //Retornar la altura por la izquierda
-                else return AltDer + 1; //Retornar la altura por la derecha
+                if (AltIzq > AltDer) return AltIzq + 1; 
+                else return AltDer + 1; 
             }
         }
     }
